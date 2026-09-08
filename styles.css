@@ -210,7 +210,7 @@ body {
 
 .card:hover,
 .card:focus-visible {
-  transform: translate(-3px, -5px) rotate(0deg);
+  transform: translate(-3px, -5px);
   box-shadow: 12px 14px 0 var(--accent);
   background: #fdf3dd;
 }
@@ -248,7 +248,7 @@ body {
 @media (max-width: 640px) {
   .cards { grid-template-columns: 1fr; }
   .card  { box-shadow: 7px 7px 0 var(--accent); }
-  .title { transform: rotate(-1deg); text-shadow:
+  .title { text-shadow:
     2px 2px 0 var(--orange-2),
     4px 4px 0 var(--orange),
     6px 6px 0 var(--brown); }
