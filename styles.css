@@ -1,8 +1,3 @@
-/*
-  Strike King
-  Swap fonts: change --font-display / --font-body below.
-  Swap colors: everything lives in :root. */
-
 :root {
   /* --- palette --- */
   --cream:    #f6e7c5;
@@ -87,7 +82,6 @@ body {
   height: auto;
 }
 
-/* placeholder box — delete once the real logo is in */
 .logo-ph {
   width: clamp(110px, 28vw, 170px);
   aspect-ratio: 1 / 1;
@@ -111,7 +105,6 @@ body {
   margin: 0 0 .35em;
   color: var(--cream);
   letter-spacing: .01em;
-  /* stacked 70s drop shadow */
   text-shadow:
     2px 2px 0 var(--orange-2),
     4px 4px 0 var(--orange),
@@ -155,7 +148,6 @@ body {
   transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
 
-/* top stripe band */
 .card::before {
   content: "";
   position: absolute;
