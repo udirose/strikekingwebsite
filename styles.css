@@ -243,6 +243,65 @@ body {
 
 .foot p { margin: 0; }
 
+.foot__link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.foot__button {
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.cookie-banner {
+  position: fixed;
+  inset: auto 1rem 1rem;
+  width: min(640px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding: 1rem;
+  border: 3px solid var(--brown);
+  border-radius: 18px;
+  background: var(--cream);
+  color: var(--brown);
+  box-shadow: 8px 8px 0 var(--orange);
+  z-index: 20;
+}
+
+.cookie-banner__text {
+  margin: 0 0 .9rem;
+  line-height: 1.45;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.cookie-banner__button {
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  padding: .45rem .85rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cookie-banner__button--accept {
+  background: var(--teal);
+  color: var(--cream);
+}
+
+.cookie-banner__button--decline {
+  background: transparent;
+  color: var(--brown);
+}
+
 /* ---------- responsive tweaks ---------- */
 
 @media (max-width: 640px) {
@@ -252,6 +311,10 @@ body {
     2px 2px 0 var(--orange-2),
     4px 4px 0 var(--orange),
     6px 6px 0 var(--brown); }
+  .cookie-banner {
+    inset: auto .65rem .65rem;
+    width: calc(100% - 1.3rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
