@@ -18,81 +18,9 @@
 <meta name="twitter:image" content="https://playstrikeking.com/assets/illustration2.png">
 <link rel="icon" type="image/png" href="assets/illustration2.png">
 <link rel="apple-touch-icon" href="assets/illustration2.png">
-<link rel="stylesheet" href="styles.css?v=26aa76e1">
+<link rel="stylesheet" href="styles.css?v=fc9107f3">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script>
-  const GA_MEASUREMENT_ID = 'G-DM5W22ZMQF';
-  const ANALYTICS_CONSENT_KEY = 'sk_analytics_consent';
-
-  function loadAnalytics() {
-    if (window.gtag) return;
-
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag() {
-      window.dataLayer.push(arguments);
-    };
-
-    window.gtag('js', new Date());
-    window.gtag('config', GA_MEASUREMENT_ID, {
-      anonymize_ip: true,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
-    });
-  }
-
-  function setAnalyticsConsent(value) {
-    localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
-    const banner = document.getElementById('cookie-banner');
-    banner.hidden = true;
-
-    if (value === 'granted') {
-      loadAnalytics();
-    }
-  }
-
-  function openCookieBanner() {
-    const banner = document.getElementById('cookie-banner');
-    banner.hidden = false;
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const consent = localStorage.getItem(ANALYTICS_CONSENT_KEY);
-    const acceptButton = document.getElementById('accept-analytics');
-    const declineButton = document.getElementById('decline-analytics');
-    const settingsButton = document.getElementById('cookie-settings');
-    const banner = document.getElementById('cookie-banner');
-
-    acceptButton.addEventListener('click', function () {
-      setAnalyticsConsent('granted');
-    });
-
-    declineButton.addEventListener('click', function () {
-      setAnalyticsConsent('denied');
-    });
-
-    settingsButton.addEventListener('click', function () {
-      openCookieBanner();
-    });
-
-    if (consent === 'granted') {
-      loadAnalytics();
-      banner.hidden = true;
-      return;
-    }
-
-    if (consent === 'denied') {
-      banner.hidden = true;
-      return;
-    }
-
-    banner.hidden = false;
-  });
-</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "af7f5542d32e4f5886fd5299faff64e4"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 
@@ -152,23 +80,10 @@
       </a>
     </nav>
 
-    <aside class="cookie-banner" id="cookie-banner" hidden>
-      <p class="cookie-banner__text">
-        We use optional cookies to measure visits and traffic sources.
-      </p>
-      <div class="cookie-banner__actions">
-        <button class="cookie-banner__button cookie-banner__button--accept" id="accept-analytics" type="button">Accept Cookies</button>
-        <button class="cookie-banner__button cookie-banner__button--decline" id="decline-analytics" type="button">Decline</button>
-        <a class="cookie-banner__button cookie-banner__button--info" href="privacy.html">Why do we use cookies?</a>
-      </div>
-    </aside>
-
     <footer class="foot">
       <p>&copy; 2026 RBI Studios. All rights reserved.</p>
       <p>
         <a class="foot__link" href="privacy.html">Privacy Policy</a>
-        <span aria-hidden="true">•</span>
-        <button class="foot__link foot__button" id="cookie-settings" type="button">Cookie Settings</button>
       </p>
     </footer>
 

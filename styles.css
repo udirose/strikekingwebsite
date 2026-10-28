@@ -290,82 +290,17 @@ body {
   padding: .35rem .6rem;
 }
 
-.foot__button {
-  border: 0;
-  padding: 0;
-  background: none;
-  font: inherit;
-  letter-spacing: inherit;
-  text-transform: inherit;
-  cursor: pointer;
-}
-
-.cookie-banner {
-  width: min(640px, 100%);
-  margin: .85rem auto 0;
-  padding: .65rem .8rem;
-  border: 3px solid var(--brown);
-  border-radius: 18px;
-  background: var(--cream);
-  color: var(--brown);
-}
 
 
 
-.cookie-banner__text {
-  margin: 0 0 .45rem;
-  line-height: 1.3;
-}
 
-.cookie-banner__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .55rem;
-}
 
-.cookie-banner__button {
-  border: 2px solid var(--brown);
-  border-radius: 999px;
-  padding: .35rem .75rem;
-  font: inherit;
-  font-size: .95rem;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
 
-.cookie-banner__button--accept {
-  background: var(--teal);
-  color: var(--cream);
-}
 
-.cookie-banner__button--decline {
-  background: var(--itch-red);
-  border-color: var(--brown);
-  color: var(--cream);
-}
 
-.cookie-banner__button--info {
-  background: var(--discord-blue);
-  border-color: var(--brown);
-  color: var(--cream);
-}
 
-.cookie-banner__button:hover,
-.cookie-banner__button:focus-visible {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 0 var(--brown);
-  filter: brightness(1.06);
-}
 
-.cookie-banner__button:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 0 var(--brown);
-}
+
 
 /* ---------- responsive tweaks ---------- */
 
@@ -439,28 +374,6 @@ body {
     font-size: .7rem;
     letter-spacing: .08em;
   }
-  .cookie-banner {
-    position: sticky;
-    bottom: .65rem;
-    width: 100%;
-    margin: .85rem auto 0;
-    z-index: 10;
-    padding: .5rem .65rem;
-    border-width: 2px;
-  }
-  .cookie-banner__text {
-    font-size: .78rem;
-    margin-bottom: .35rem;
-    line-height: 1.25;
-  }
-  .cookie-banner__actions {
-    gap: .35rem;
-  }
-  .cookie-banner__button {
-    font-size: .74rem;
-    padding: .22rem .5rem;
-    border-width: 2px;
-  }
 }
 
 @media (max-width: 420px) {
@@ -480,18 +393,10 @@ body {
     width: 1.8rem;
     height: 1.8rem;
   }
-  .cookie-banner__button {
-    font-size: .68rem;
-    padding: .2rem .4rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .card, .arrow, .social-links__icon, .cookie-banner__button { transition: none; }
+  .card, .arrow, .social-links__icon { transition: none; }
   .card:hover, .card:focus-visible { transform: none; }
   .social-links__icon:hover, .social-links__icon:focus-visible { transform: none; }
-  .cookie-banner__button:hover, .cookie-banner__button:focus-visible, .cookie-banner__button:active {
-    transform: none;
-    box-shadow: none;
-  }
 }
